@@ -3,41 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benim Web Sitem</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Memleketim</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Anasayfa</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-          <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-          <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-        </ul>
-      </div>
-    </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="sehrim.html">Şehrim</a></li>
+    </ul>
   </nav>
 
-  <div class="container">
+  <!-- Slider -->
+  <section class="slider">
+    <h2>Gezilecek Yerler</h2>
+    <div class="slider-container">
+      <a href="#yer1"><img src="img/kizkulesi.jpg" alt="Kız Kulesi"></a>
+      <a href="#yer2"><img src="img/galatakulesi.jpg" alt="Galata Kulesi"></a>
+      <a href="#yer3"><img src="img/rumelihisari.jpg" alt="Rumeli Hisarı"></a>
+      <a href="#yer4"><img src="img/ortakoycamii.jpg" alt="Ortaköy Camii"></a>
+    </div>
+  </section>
 
+  <!-- Şehir Bilgileri -->
+  <main>
+    <h1>Benim Şehrim: İstanbul</h1>
+    <p><strong>Nüfus:</strong> 15.806.279</p>
+    <p><strong>Bölge:</strong> Marmara</p>
+    <p><strong>Meşhur Yiyecekler:</strong> Balık ekmek, Islak hamburger</p>
+    <p><strong>Ekonomi:</strong> Sanayi ve turizm</p>
+  </main>
 
+  <!-- İçerikler (Slider bağlantıları için) -->
+  <section id="yer1">
+  <h2>Kız Kulesi</h2>
+  <p>Boğaz'ın ortasında yer alan Kız Kulesi, İstanbul'un en romantik yapılarından biridir.</p>
+  </section>
 
-  </div>
+  <section id="yer2">
+  <h2>Galata Kulesi</h2>
+  <p>Galata semtinde bulunan kule, İstanbul'u kuşbakışı izleyebileceğiniz tarihi bir yapıdır.</p>
+  </section>
 
- <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center p-3 mt-4">
-    <p>&copy; 2025 - Benim Web Sitem</p>
+  <section id="yer3">
+  <h2>Rumeli Hisarı</h2>
+  <p>Fatih Sultan Mehmet tarafından İstanbul'un fethi öncesi inşa edilen stratejik bir kaledir.</p>
+  </section>
+
+  <section id="yer4">
+  <h2>Ortaköy Camii</h2>
+  <p>Boğaz manzarasıyla ünlü camii, barok mimarisiyle göz alıcı bir ibadethanedir.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Benim Web Sitem</p>
   </footer>
 
 </body>
