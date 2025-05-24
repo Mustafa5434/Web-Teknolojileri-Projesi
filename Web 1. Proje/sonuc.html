@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Sonuçları</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="sehrim.html">Şehrim</a></li>
+            <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+            <li><a href="miras.html">Miras</a></li>
+            <li><a href="sonuc.html">Form Sonuçları</a></li>
+        </ul>
+    </nav>
+  </nav>
+
+  <main class="container">
+    <h2>Form Bilgileriniz</h2>
+    <p><strong>Ad Soyad:</strong> <span id="adsoyad"></span></p>
+    <p><strong>E-posta:</strong> <span id="email"></span></p>
+    <p><strong>Telefon:</strong> <span id="telefon"></span></p>
+    <p><strong>Konu:</strong> <span id="konu"></span></p>
+    <p><strong>Mesaj:</strong> <span id="mesaj"></span></p>
+  </main>
+
+  <script>
+    // URL'den gelen parametreleri al
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("adsoyad").textContent = params.get("adsoyad") || "-";
+    document.getElementById("email").textContent = params.get("email") || "-";
+    document.getElementById("telefon").textContent = params.get("telefon") || "-";
+    document.getElementById("konu").textContent = params.get("konu") || "-";
+    document.getElementById("mesaj").textContent = params.get("mesaj") || "-";
+  </script>
+</body>
+</html>
