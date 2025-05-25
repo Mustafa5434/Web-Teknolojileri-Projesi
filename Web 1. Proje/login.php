@@ -7,9 +7,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sifre = $_POST["password"];
 
     if ($email == $dogru_kullanici && $sifre == $dogru_sifre) {
-        echo "Hoşgeldiniz " . htmlspecialchars($sifre);
+        echo "<script>
+                alert('Hoşgeldiniz $sifre');
+                window.location.href = 'index.html';
+              </script>";
+        exit();
     } else {
-        header("Location: login.html");
+        // Hatalı giriş
+        echo "<script>
+                alert('Kullanıcı adı veya şifre hatalı!');
+                window.location.href = 'login.html';
+              </script>";
         exit();
     }
 } else {

@@ -17,7 +17,7 @@
             <li><a href="sehrim.html">Şehrim</a></li>
             <li><a href="ozgecmis.html">Özgeçmiş</a></li>
             <li><a href="miras.html">Miras</a></li>
-            <li><a href="sonuc.html">Form Sonuçları</a></li>
+            <li><a href="login.html">Giriş Yap</a></li>
         </ul>
     </nav>
 
@@ -43,7 +43,39 @@
 
             <button type="submit">Gönder</button>
             <button type="reset">Temizle</button>
+
+            <button type="button" onclick="jsIleKontrolEt()">JavaScript ile Kontrol Et</button>
         </form>
+
+        <script>
+            function jsIleKontrolEt() {
+                const adsoyad = document.getElementById("adsoyad").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const telefon = document.getElementById("telefon").value.trim();
+                const konu = document.getElementById("konu").value.trim();
+                const mesaj = document.getElementById("mesaj").value.trim();
+
+            if (!adsoyad || !email || !telefon || !konu || !mesaj) {
+                alert("Tüm alanları doldurmanız gerekmektedir.");
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Lütfen geçerli bir e-posta adresi giriniz.");
+                return false;
+            }
+
+            const telRegex = /^[0-9]+$/;
+            if (!telRegex.test(telefon)) {
+                alert("Telefon numarası sadece rakamlardan oluşmalıdır.");
+                return false;
+            }
+
+            alert("Form JavaScript ile başarıyla doğrulandı.");
+            return true;
+            }
+        </script>
     </main>
 
     <!-- Footer -->

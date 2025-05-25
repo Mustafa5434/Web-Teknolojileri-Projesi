@@ -16,7 +16,7 @@
             <li><a href="sehrim.html">Şehrim</a></li>
             <li><a href="ozgecmis.html">Özgeçmiş</a></li>
             <li><a href="miras.html">Miras</a></li>
-            <li><a href="sonuc.html">Form Sonuçları</a></li>
+            <li><a href="login.html">Giriş Yap</a></li>
         </ul>
     </nav>
 
@@ -24,17 +24,46 @@
     <main>
         <h1>İlgi Alanlarım</h1>
         <ul style="list-style: none; padding: 0; font-size: 18px; color: #444;">
-            <li>Bilgisayar Oyunları</li>
-            <li>Kitap Okumak</li>
-            <li>Müzik Dinlemek</li>
-            <li>Web Tasarımı</li>
-            <li>Film ve Dizi İzlemek</li>
+            <li>🎮 Bilgisayar Oyunları</li>
+            <li>📚 Kitap Okumak</li>
+            <li>🎧 Müzik Dinlemek</li>
+            <li>💻 Web Tasarımı</li>
+            <li>🎬 Film ve Dizi İzlemek</li>
         </ul>
+
+        <div id="film" style="margin-top: 20px;"></div>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Benim Web Sitem</p>
     </footer>
+
+<script>
+    const apiKey = 'af3af54b';
+    const url = `https://www.omdbapi.com/?apikey=${apiKey}&t=The+Prestige`;
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            if (data.Response === "True") {
+                document.getElementById("film").innerHTML = `
+                    <img src="${data.Poster}" alt="${data.Title}" style="width:200px;">
+                    <div id="filmInfo">
+                        <h3>${data.Title} (${data.Year})</h3>
+                        <p>${data.Plot}</p>
+                        <p><strong>IMDB Puanı:</strong> ${data.imdbRating}</p>
+                    </div>
+                `;
+            } else {
+                document.getElementById("film").textContent = "Film bulunamadı.";
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            document.getElementById("film").textContent = "Film bilgisi yüklenemedi.";
+        });
+</script>
+
 </body>
 </html>

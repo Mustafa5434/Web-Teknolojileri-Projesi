@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 1. Proje</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        img.hobi {
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+
+        .imgcontainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -17,14 +56,37 @@
             <li><a href="sehrim.html">Şehrim</a></li>
             <li><a href="ozgecmis.html">Özgeçmiş</a></li>
             <li><a href="miras.html">Miras</a></li>
-            <li><a href="sonuc.html">Form Sonuçları</a></li>
+            <li><a href="login.html">Giriş Yap</a></li>
         </ul>
     </nav>
 
-    <!-- Ana İçerik -->
+    <!-- Ana içerik -->
     <main>
-        <h1>Hoş Geldiniz!</h1>
-        <p>Bu benim Web 1. projem. HTML, CSS ve JS kullanılarak hazırlanmıştır.</p>
+        <h1>Merhaba, ben Mustafa Zeki ER</h1>
+        <p>
+            Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Web teknolojilerine ve yazılım geliştirmeye ilgim var.
+            Boş zamanlarımda kod yazar, müzik dinlerim ve kitap okurum. Ayrıca sporla ilgilenmeyi severim.
+        </p>
+
+        <h2>Hobilerim</h2>
+        <ul>
+            <li>Bilgisayar Oyunları</li>
+            <li>Web Programlama</li>
+            <li>Kitap Okumak</li>
+            <li>Futbol ve Yüzme</li>
+        </ul>
+
+        <h2>Sevdiğim Sporlar ve Etkinlikler</h2>
+        <div class="imgcontainer">
+            <img src="img/futbol.jpeg" alt="Futbol" class="hobi">
+            <img src="img/yuzme.jpeg" alt="Yüzme" class="hobi">
+            <img src="img/kitap.jpeg" alt="Kitap Okuma" class="hobi">
+        </div>
+
+        <h2>Bağlantılar</h2>
+        <ul>
+            <li><a href="https://github.com/Mustafa5434/Web-Teknolojileri-Projesi" target="_blank">GitHub Profilim</a></li>
+        </ul>
     </main>
 
   <!-- Footer -->
@@ -32,6 +94,5 @@
   <p>&copy; 2025 Benim Web Sitem</p>
   </footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
