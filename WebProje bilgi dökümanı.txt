@@ -1,0 +1,1 @@
+Bu projenin amacı, HTML, CSS, JavaScript ve PHP teknolojilerini kullanarak bireyin kendisini tanıttığı, ilgi alanlarını, memleketini, kültürel mirasını ve özgeçmişini sunduğu kişisel bir web sitesi tasarlamaktır.
